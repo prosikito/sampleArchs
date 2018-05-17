@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    //Package id
+    packageId = "com.talentomobile.samplearch"
+
+    // App dependencies
+    support             = '27.1.1'
+    junit               = '4.12'
+    test_runner         = '1.0.2'
+    test_espresso       = '3.0.2'
+    test_roboelectric   = '3.8'
+    butterknifeVersion  = '8.7.0'
+    dagger2Version      = '2.8'
+    picassoVersion      = '2.5.2'
+    javaAnnotation      = 'jsr250-api:1.0'
+    gson                = '2.6.2'
+
+}
